@@ -1,0 +1,92 @@
+.restaurant-fav-container{
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 4.85rem;
+  cursor: pointer;
+}
+
+.restaurant-fav-icon{
+  fill: transparent;
+  stroke: black;
+  stroke-width: 50;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-block: 35%;
+
+    svg{
+      overflow: visible;
+      width: 1.5rem;
+    }
+
+    path{
+      transform-origin: center;
+    }
+
+    .heart-bkg{
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      stroke: none;
+      margin-inline: 35%;
+    }
+}
+
+.restaurant-fav-container:hover .heart-main path{
+  animation: fill-animation 300ms ease-in-out forwards;
+}
+
+.restaurant-fav-container:hover .heart-bkg path{
+  animation: explode-animation 600ms ease-in-out forwards;
+}
+
+@keyframes fill-animation{
+  0%{
+    transform: scale(1);
+  }
+
+  89%{
+    stroke: black;
+    fill: transparent;
+  }
+
+  90%{
+    transform: scale(1.5);
+    stroke: url(#MyGradient);
+    fill: url(#MyGradient);
+  }
+
+  100%{
+    transform: scale(1);
+    stroke: url(#MyGradient);
+    fill: url(#MyGradient);
+  }
+}
+
+@keyframes explode-animation{
+  0%{
+    opacity: 0;
+  }
+
+  35%{
+    fill: #FF79DA;
+    transform: scale(1);
+  }
+
+  45%{
+    opacity: 0;
+  }
+
+  46%{
+    opacity: 1;
+  }
+
+  100%{
+    transform: scale(3);
+    opacity: 0;
+  }
+}
