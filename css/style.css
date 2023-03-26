@@ -18,6 +18,10 @@
   height: 0;
 }
 
+html {
+  background-color: #EAEAEA;
+}
+
 body {
   font-family: "roboto", sans-serif;
 }
@@ -212,6 +216,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .website-title {
+  background-color: white;
   font-family: "Shrikhand", cursive;
   text-align: center;
   padding: 0.7rem 0 0.2rem 0;

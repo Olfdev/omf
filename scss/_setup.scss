@@ -34,17 +34,21 @@ $roboto: 'roboto', sans-serif;
     width: 0;
     height: 0;
 }
+
+html{
+    background-color: $lightgrey;
+}
   
-  body {
-    font-family: $roboto;
-  }
+body {
+font-family: $roboto;
+}
 
-  a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: inherit;
-  }
+a, a:visited, a:hover, a:active {
+text-decoration: none;
+color: inherit;
+}
 
-  @for $i from 1 through 10 {
+@for $i from 1 through 10 {
     .submenu-card:nth-of-type(0n + #{$i}){
         transform: scale(0);
         animation: 600ms grow (math.div($i, 10) + s) cubic-bezier(0.5, 1.5, 0.5, 1.0) forwards;
