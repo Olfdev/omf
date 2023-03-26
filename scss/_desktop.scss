@@ -23,25 +23,12 @@
     .desc h2{
         font-size: 2.5rem;
     }
-        
-    .desktop-howto-restaurants{
-        //display: grid;
-        //justify-content: center;
-    }
 
     .howto{
         max-width: 1024px;
         margin: auto;
         padding-bottom: 3rem;
     }
-
-    .howto-step{
-        //padding-right: 5rem;
-    }
-
-
-
-
 
     .desktop-steps{
         gap: 2rem;
@@ -61,14 +48,8 @@
     }
 
     .desktop-cards{
-        //display: grid;
-        //grid-template-columns: repeat(4, 20rem);
         display: flex;
         gap: 2rem;
-    }
-
-    .restaurant-card{
-        //margin: 0 1rem;
     }
 
     .restaurant-card-container{
