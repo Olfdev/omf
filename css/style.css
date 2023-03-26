@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   box-sizing: border-box;
+  user-select: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -17,13 +27,198 @@ a, a:visited, a:hover, a:active {
   color: inherit;
 }
 
+.submenu-card:nth-of-type(0n + 1) {
+  transform: scale(0);
+  animation: 600ms grow 0.1s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 2) {
+  transform: scale(0);
+  animation: 600ms grow 0.2s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 3) {
+  transform: scale(0);
+  animation: 600ms grow 0.3s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 4) {
+  transform: scale(0);
+  animation: 600ms grow 0.4s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 5) {
+  transform: scale(0);
+  animation: 600ms grow 0.5s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 6) {
+  transform: scale(0);
+  animation: 600ms grow 0.6s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 7) {
+  transform: scale(0);
+  animation: 600ms grow 0.7s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 8) {
+  transform: scale(0);
+  animation: 600ms grow 0.8s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 9) {
+  transform: scale(0);
+  animation: 600ms grow 0.9s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+.submenu-card:nth-of-type(0n + 10) {
+  transform: scale(0);
+  animation: 600ms grow 1s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#FF79DA -5.2%, #9356DC 110.74%);
+  color: black;
+  z-index: 2;
+  animation: loader-display 100ms linear 3s forwards;
+}
+
+.text {
+  display: flex;
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+}
+
+.letter:nth-of-type(0n + 1) {
+  animation: bounce 1s ease infinite 0.1s;
+  -webkit-animation: bounce 1s ease infinite 0.1s;
+}
+
+.letter:nth-of-type(0n + 2) {
+  animation: bounce 1s ease infinite 0.2s;
+  -webkit-animation: bounce 1s ease infinite 0.2s;
+}
+
+.letter:nth-of-type(0n + 3) {
+  animation: bounce 1s ease infinite 0.3s;
+  -webkit-animation: bounce 1s ease infinite 0.3s;
+}
+
+.letter:nth-of-type(0n + 4) {
+  animation: bounce 1s ease infinite 0.4s;
+  -webkit-animation: bounce 1s ease infinite 0.4s;
+}
+
+.letter:nth-of-type(0n + 5) {
+  animation: bounce 1s ease infinite 0.5s;
+  -webkit-animation: bounce 1s ease infinite 0.5s;
+}
+
+.letter:nth-of-type(0n + 6) {
+  animation: bounce 1s ease infinite 0.6s;
+  -webkit-animation: bounce 1s ease infinite 0.6s;
+}
+
+.letter:nth-of-type(0n + 7) {
+  animation: bounce 1s ease infinite 0.7s;
+  -webkit-animation: bounce 1s ease infinite 0.7s;
+}
+
+.letter:nth-of-type(0n + 8) {
+  animation: bounce 1s ease infinite 0.8s;
+  -webkit-animation: bounce 1s ease infinite 0.8s;
+}
+
+@keyframes loader-display {
+  90% {
+    opacity: 0;
+  }
+  99% {
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-55px);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  58% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  65% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(0.4);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.header {
+  position: relative;
+}
+
+.new {
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 0.2rem;
+  color: #008766;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 .website-title {
   font-family: "Shrikhand", cursive;
   text-align: center;
   padding: 0.7rem 0 0.2rem 0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
   font-weight: 400;
+  font-size: 2rem;
 }
 
 .location {
@@ -53,7 +248,7 @@ a, a:visited, a:hover, a:active {
   margin: 1rem 0 2rem 0;
 }
 
-.explore-btn {
+.btn {
   position: relative;
   background: linear-gradient(#FF79DA -5.2%, #9356DC 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -62,11 +257,11 @@ a, a:visited, a:hover, a:active {
   color: white;
   padding: 1rem 1.5rem;
 }
-.explore-btn:hover {
+.btn:hover {
   box-shadow: none;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
-.explore-btn:hover::before {
+.btn:hover::before {
   content: "";
   display: block;
   position: absolute;
@@ -78,7 +273,7 @@ a, a:visited, a:hover, a:active {
   border-radius: 2em;
   cursor: pointer;
 }
-.explore-btn span {
+.btn span {
   font-weight: 500;
   font-size: medium;
   font-family: "roboto", sans-serif;
@@ -86,14 +281,6 @@ a, a:visited, a:hover, a:active {
 
 .howto {
   padding: 2rem 1rem;
-}
-
-.howto-circle {
-  /*padding: 0.5rem;
-
-  position: absolute;
-  left: 0;
-  margin-left: 1.25rem;*/
 }
 
 .howto-number {
@@ -175,12 +362,12 @@ a, a:visited, a:hover, a:active {
   padding: 1rem;
 }
 
-.footer {
+footer {
   background-color: #353535;
   padding: 1.5rem 1rem;
   color: white;
 }
-.footer p {
+footer p {
   margin-bottom: 0.5rem;
 }
 
@@ -203,7 +390,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .restaurant-fav-container {
-  -webkit-tap-highlight-color: transparent;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -281,6 +467,224 @@ a, a:visited, a:hover, a:active {
   100% {
     transform: scale(3);
     opacity: 0;
+  }
+}
+.header-arrow {
+  position: absolute;
+  left: 1.5rem;
+  top: 2rem;
+  z-index: 1;
+}
+
+.restaurant-picture-container {
+  position: relative;
+  z-index: -1;
+}
+
+.restaurant-picture {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu-container {
+  background-color: #F6F6F6;
+  padding: 1.5rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -3rem;
+}
+
+.menu-title-fav {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.submenu-title {
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+#menu-fav {
+  position: inherit;
+  height: auto;
+}
+
+#menu-fav-icon {
+  margin-block: 0;
+}
+
+.submenu-title::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.submenu-card {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin-block: 1rem;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+  max-width: 100%;
+}
+.submenu-card:hover .submenu-check {
+  margin: 0;
+}
+
+.submenu-desc {
+  padding: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+
+.submenu-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.submenu-ingredients {
+  padding-top: 0.3rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.submenu-price {
+  padding: 1rem;
+  align-self: flex-end;
+}
+
+.submenu-check {
+  background: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+  margin: 0 -3.7rem 0 0;
+  transition: margin 500ms;
+}
+
+.submenu-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0.2rem;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.submenu-check i {
+  color: #99E2D0;
+}
+
+#btn-container {
+  padding: 0 2rem 2.5rem 2rem;
+}
+
+#order-btn {
+  padding-inline: 3rem;
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .loader-container {
+    max-width: 1440px;
+  }
+  .website-title {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+  }
+  .header-arrow {
+    left: 4rem;
+    top: 3rem;
+  }
+  .desc h2 {
+    font-size: 2.5rem;
+  }
+  .howto {
+    max-width: 1024px;
+    margin: auto;
+    padding-bottom: 3rem;
+  }
+  .desktop-steps {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .restaurant {
+    padding: 3rem 0 2rem;
+    overflow: hidden;
+  }
+  .desktop-restaurants {
+    max-width: 1024px;
+    margin: auto;
+    padding-inline: 1rem;
+  }
+  .desktop-cards {
+    display: flex;
+    gap: 2rem;
+  }
+  .restaurant-card-container {
+    min-width: 20rem;
+  }
+  .restaurant-fav-container {
+    width: 4rem;
+    height: 5rem;
+    bottom: 1rem;
+    cursor: pointer;
+  }
+  .restaurant-fav-icon {
+    margin-block: 45%;
+  }
+  .menu-title-fav {
+    justify-content: center;
+  }
+  .menu-container {
+    margin: -3rem 10rem 0 10rem;
+  }
+  #btn-container {
+    margin-inline: 10rem;
+  }
+  .desktop-menu {
+    margin-inline: 10rem;
+  }
+  footer {
+    display: flex;
+    align-items: baseline;
+    gap: 4rem;
+    justify-content: flex-end;
+    padding: 1.5rem 5rem 1.5rem 1rem;
+  }
+  .footer-title {
+    order: 1;
+    margin-block: 1.5rem;
   }
 }
 

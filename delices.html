@@ -8,15 +8,174 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
-    <title>Le délice des sens</title>
+    <title>La palette du goût</title>
 </head>
 <body>
     <header>
         <div class="header">
+            <a href="index.html"><i class="fa-solid fa-arrow-left fa-xl header-arrow" aria-hidden="true"></i></a>
             <h1 class="website-title">ohmyfood</h1>
         </div>
     </header>
     <main>
+        <section class="restaurant-picture-container">
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurant-picture" alt="photo de plat">
+        </section>
+        <section class="menu-container">
+            <div class="menu-title-fav">
+                <h1 class="menu-title">Le délice des sens</h1>
+                <div class="restaurant-fav-container" id="menu-fav">
+                    <div class="restaurant-fav-icon" id="menu-fav-icon">
+                        <svg class="heart-main" viewBox="0 0 512 512" width="100" title="heart">
+                            <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                        </svg>
+                        <svg class="heart-bkg" viewBox="0 0 512 512" width="100" title="heart">
+                            <defs>
+                            <linearGradient id="MyGradient" x2="0%" y2="100%">
+                                <stop offset="-5.2%" stop-color="#9356DC" />
+                                <stop offset="110.74%" stop-color="#FF79DA" />
+                            </linearGradient>
+                            </defs>
+                            <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-menu">
+                <p class="submenu-title">Entrées</p>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Tartare de thon</h4>
+                        <p class="submenu-ingredients">Assaisonné au yuzu</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>25€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Bouchée de homard croustillant</h4>
+                        <p class="submenu-ingredients">Et sa farandole de petits légumes</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>35€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Velouté de cèpes</h4>
+                        <p class="submenu-ingredients">Aux truffes</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>20€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="submenu-title">Plats</p>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Poulet rôti aux herbes de Provence</h4>
+                        <p class="submenu-ingredients">Et sa crème de truffe</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>40€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Langouste rôtie</h4>
+                        <p class="submenu-ingredients">Et ses légumes de saison</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>35€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Côte de bœuf Angus</h4>
+                        <p class="submenu-ingredients">Et sa purée de panais</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>44€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="submenu-title">Desserts</p>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Farandole de desserts</h4>
+                        <p class="submenu-ingredients">Du chef</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>18€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Crème brulée</h4>
+                        <p class="submenu-ingredients">Revisitée</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>22€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="submenu-card">
+                    <div class="submenu-desc">
+                        <h4 class="submenu-name">Tiramisu</h4>
+                        <p class="submenu-ingredients">À la noisette</p>
+                    </div>
+                    <div class="submenu-price">
+                        <h4>23€</h4>
+                    </div>
+                    <div class="submenu-check">
+                        <div class="submenu-circle">
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="desc" id="btn-container">
+            <button type="submit" class="btn"  id="order-btn"><span>Commander</span></button>
+        </section>
     </main>
     <footer class="footer">
         <h1 class="footer-title">ohmyfood</h1>

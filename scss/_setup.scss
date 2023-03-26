@@ -1,3 +1,4 @@
+@use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 $purple: #9356DC;
@@ -7,13 +8,14 @@ $lightgrey: #EAEAEA;
 $darkgrey: #7E7E7E;
 $bkglightgrey: #F6F6F6;
 $bkglightpurple: #F5EDFF;
-$bkgfooter: #353535;
+$bkgfootergrey: #353535;
+$green: #008766;
+$bkglightgreen: #99E2D0;
 $boxshadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 $bigboxshadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 $boxshadowstep: 0px 4px 15px rgba(0, 0, 0, 0.15);
 $shrikhand: 'Shrikhand', cursive;
 $roboto: 'roboto', sans-serif;
-//$genpadding: 1rem 0 0.5rem 0;
 
 
 * {
@@ -22,7 +24,16 @@ $roboto: 'roboto', sans-serif;
     margin-inline-start: 0;
     margin-inline-end: 0;
     box-sizing: border-box;
-  }
+    user-select: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
   
   body {
     font-family: $roboto;
@@ -32,3 +43,20 @@ $roboto: 'roboto', sans-serif;
     text-decoration: none;
     color: inherit;
   }
+
+  @for $i from 1 through 10 {
+    .submenu-card:nth-of-type(0n + #{$i}){
+        transform: scale(0);
+        animation: 600ms grow (math.div($i, 10) + s) cubic-bezier(0.5, 1.5, 0.5, 1.0) forwards;
+    }
+}
+
+@keyframes grow{
+    0%{
+      transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}

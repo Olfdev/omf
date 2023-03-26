@@ -1,0 +1,141 @@
+@use 'setup';
+
+.header-arrow{
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+    z-index: 1;
+}
+
+.restaurant-picture-container{
+    position: relative;
+    z-index: -1;
+}
+
+.restaurant-picture{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-container{
+    background-color: setup.$bkglightgrey;
+    padding: 1.5rem 1rem;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -3rem;
+}
+
+.menu-title-fav{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-title{
+    font-family: setup.$shrikhand;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.submenu-title{
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+#menu-fav{
+    position: inherit;
+    height: auto;
+}
+
+#menu-fav-icon{
+    margin-block: 0;
+}
+
+.submenu-title::after{
+    content: "";
+    width: 2.5rem;
+    height: 0.20rem;
+    background-color: setup.$bkglightgreen;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.submenu-card{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    margin-block: 1rem;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    max-width: 100%;
+
+    &:hover .submenu-check{
+        margin: 0;
+    } 
+}
+
+.submenu-desc{
+    padding: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+}
+
+.submenu-name{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.submenu-ingredients{
+    padding-top: 0.3rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.submenu-price{
+    padding: 1rem;
+    align-self: flex-end;
+}
+
+.submenu-check{
+    background: setup.$bkglightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.2rem;
+    margin: 0 -3.7rem 0 0;
+    transition: margin 500ms;
+}
+
+.submenu-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 50%;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.submenu-check i{
+    color: setup.$bkglightgreen;
+}
+
+#btn-container{
+    padding: 0 2rem 2.5rem 2rem;
+}
+
+#order-btn{
+    padding-inline: 3rem;
+}

@@ -1,0 +1,119 @@
+@use 'sass:math';
+@media (min-width: 1024px){
+    body{
+        max-width: 1440px; //Full screen
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .loader-container{
+        max-width: 1440px; //Full screen
+    }
+
+    .website-title{
+        padding: 1rem 0;
+        font-size: 2.5rem;
+    }
+
+    .header-arrow{
+        left: 4rem;
+        top: 3rem;
+    }
+
+    .desc h2{
+        font-size: 2.5rem;
+    }
+        
+    .desktop-howto-restaurants{
+        //display: grid;
+        //justify-content: center;
+    }
+
+    .howto{
+        max-width: 1024px;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
+
+    .howto-step{
+        //padding-right: 5rem;
+    }
+
+
+
+
+
+    .desktop-steps{
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .restaurant{
+        padding: 3rem 0 2rem;
+        overflow: hidden; //Full screen
+    }
+
+    .desktop-restaurants{
+        max-width: 1024px;
+        margin: auto;
+        padding-inline: 1rem;
+    }
+
+    .desktop-cards{
+        //display: grid;
+        //grid-template-columns: repeat(4, 20rem);
+        display: flex;
+        gap: 2rem;
+    }
+
+    .restaurant-card{
+        //margin: 0 1rem;
+    }
+
+    .restaurant-card-container{
+        min-width: 20rem;
+    }
+
+    .restaurant-fav-container{
+        width: 4rem;
+        height: 5rem;
+        bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .restaurant-fav-icon{
+        margin-block: 45%;
+    }
+
+    .menu-title-fav{
+        justify-content: center;
+    }
+
+    .menu-container{
+        margin: -3rem 10rem 0 10rem;
+    }
+
+    #btn-container{
+        margin-inline: 10rem;
+    }
+
+    .desktop-menu{
+        margin-inline: 10rem;
+    }
+
+    footer{
+        display: flex;
+        align-items: baseline;
+        gap: 4rem;
+        justify-content: flex-end;
+        padding: 1.5rem 5rem 1.5rem 1rem;
+    }
+
+    .footer-title{
+        order: 1;
+        margin-block: 1.5rem;
+    }
+
+
+}
